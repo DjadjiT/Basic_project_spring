@@ -27,7 +27,7 @@ public class Users {
     @NotBlank
     private String password;
 
-    @ManyToOne(cascade = CascadeType.MERGE)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinTable(
             name = "user_role",
             joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "user_id")},
